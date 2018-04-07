@@ -3,6 +3,7 @@ package io.github.uazw.dddtraining.register;
 import java.util.List;
 
 public class User {
+    private long id;
     private boolean isActive;
     private String email;
     private List<String> policies;
