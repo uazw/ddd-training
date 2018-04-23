@@ -1,8 +1,8 @@
-package io.github.uazw.dddtraining.login;
+package io.github.uazw.dddtraining.user.login;
 
-import io.github.uazw.dddtraining.register.PasswordEncoder;
-import io.github.uazw.dddtraining.register.User;
-import io.github.uazw.dddtraining.register.UserRepository;
+import io.github.uazw.dddtraining.user.register.PasswordEncoder;
+import io.github.uazw.dddtraining.user.register.User;
+import io.github.uazw.dddtraining.user.register.UserRepository;
 
 import java.util.Optional;
 

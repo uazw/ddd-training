@@ -1,4 +1,4 @@
-package io.github.uazw.dddtraining.register;
+package io.github.uazw.dddtraining.user.register;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

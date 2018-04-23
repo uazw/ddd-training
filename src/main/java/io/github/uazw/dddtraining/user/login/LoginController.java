@@ -1,4 +1,4 @@
-package io.github.uazw.dddtraining.login;
+package io.github.uazw.dddtraining.user.login;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

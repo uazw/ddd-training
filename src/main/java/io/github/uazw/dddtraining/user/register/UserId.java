@@ -1,4 +1,4 @@
-package io.github.uazw.dddtraining.register;
+package io.github.uazw.dddtraining.user.register;
 
 import java.util.Objects;
 

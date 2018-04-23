@@ -1,6 +1,6 @@
-package io.github.uazw.dddtraining.register;
+package io.github.uazw.dddtraining.user.register;
 
-import io.github.uazw.dddtraining.login.InformationNotMatchingException;
+import io.github.uazw.dddtraining.user.login.InformationNotMatchingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
