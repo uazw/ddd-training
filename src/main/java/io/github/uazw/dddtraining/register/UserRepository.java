@@ -2,6 +2,7 @@ package io.github.uazw.dddtraining.register;
 
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
 import java.util.Optional;
 
 import static java.util.Optional.empty;
@@ -9,7 +10,14 @@ import static java.util.Optional.empty;
 @Repository
 public class UserRepository {
 
+    private final HashMap<UserId, User> users;
+
+    public UserRepository() {
+        users = new HashMap<>();
+    }
+
     public void save(User user) {
+        users.put(user.getId(), user);
     }
 
     public User byEmail(String email) {

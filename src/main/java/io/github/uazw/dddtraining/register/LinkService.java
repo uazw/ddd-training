@@ -7,22 +7,22 @@ import org.springframework.stereotype.Service;
 public class LinkService {
 
     private LinkGenerator linkGenerator;
-    private LinkRepository linkRepository;
+    private LinkDao linkDao;
 
     @Autowired
-    public LinkService(LinkGenerator linkGenerator, LinkRepository linkRepository) {
+    public LinkService(LinkGenerator linkGenerator, LinkDao linkDao) {
         this.linkGenerator = linkGenerator;
-        this.linkRepository = linkRepository;
+        this.linkDao = linkDao;
     }
 
     public Link createLink(String email) {
         Link link = new Link(email, linkGenerator.generator());
-        linkRepository.save(link);
+        linkDao.save(link);
         return link;
 
     }
 
-    public Link byId(String linkIdentifer) {
-        return linkRepository.byId(linkIdentifer);
+    public Link byId(String linkIdentifier) {
+        return linkDao.byId(linkIdentifier);
     }
 }

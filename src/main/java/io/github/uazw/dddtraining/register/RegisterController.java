@@ -21,13 +21,13 @@ public class RegisterController {
 
     @PostMapping("/")
     public void verifyPolicyOwner(@RequestParam VerifyPolicyOwnerRequest verifyPolicyOwnerRequest) {
-        registerApplicationService.sendConfirmEmail(verifyPolicyOwnerRequest.getEmail(),
+        registerApplicationService.verifyPolicyOwnerAndEmail(verifyPolicyOwnerRequest.getEmail(),
                 verifyPolicyOwnerRequest.getPolicyNumber());
 
     }
 
     @PostMapping("/{uuid}")
     public void setEmail(@PathVariable String uuid, @RequestParam SetPasswordRequest setPasswordRequest) {
-        registerApplicationService.setPassword(uuid, setPasswordRequest.getPassword());
+        registerApplicationService.initializePassword(uuid, setPasswordRequest.getPassword());
     }
 }

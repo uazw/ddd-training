@@ -1,6 +1,6 @@
 package io.github.uazw.dddtraining.register;
 
-public class LinkRepository {
+public class LinkDao {
 
     public void save(Link link) {
 
