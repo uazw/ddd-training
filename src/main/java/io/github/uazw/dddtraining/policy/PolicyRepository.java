@@ -10,4 +10,8 @@ public class PolicyRepository {
     public void save(Policy policy) {
         policies.put(policy.getId(), policy);
     }
+
+    public Policy findByPolicyNumber(PolicyId policyId) {
+        return policies.get(policyId);
+    }
 }

@@ -17,4 +17,8 @@ public class Policy {
     public PolicyId getId() {
         return id;
     }
+
+    public boolean isTheSameEmailAddress(String otherAddress) {
+        return policyHolderDetails.getEmail().equals(otherAddress);
+    }
 }

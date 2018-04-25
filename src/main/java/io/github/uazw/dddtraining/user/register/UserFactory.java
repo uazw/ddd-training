@@ -1,5 +1,6 @@
 package io.github.uazw.dddtraining.user.register;
 
+import io.github.uazw.dddtraining.policy.PolicyId;
 import io.github.uazw.dddtraining.user.login.InformationNotMatchingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class UserFactory {
         this.userIdGenerator = userIdGenerator;
     }
 
-    public User create(String email, String policyNumber) {
+    public User create(String email, PolicyId policyNumber) {
         boolean isMatching = verifyPolicyOwnerService.isMatching(email, policyNumber);
         if (isMatching) {
             return new User(userIdGenerator.generate(), email);

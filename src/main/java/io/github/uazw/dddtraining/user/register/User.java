@@ -1,12 +1,14 @@
 package io.github.uazw.dddtraining.user.register;
 
+import io.github.uazw.dddtraining.policy.PolicyId;
+
 import java.util.List;
 
 public class User {
 
     private boolean isActive;
     private String email;
-    private List<String> policies;
+    private List<PolicyId> policies;
     private String password;
     private UserId id;
 
@@ -16,7 +18,7 @@ public class User {
         this.email = email;
     }
 
-    public void addPolicy(String policyNumber) {
+    public void addPolicy(PolicyId policyNumber) {
         this.policies.add(policyNumber);
     }
 

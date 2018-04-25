@@ -1,5 +1,6 @@
 package io.github.uazw.dddtraining.user.register;
 
+import io.github.uazw.dddtraining.policy.PolicyId;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class RegisterService {
@@ -25,7 +26,7 @@ public class RegisterService {
     //retrieve information
     //call domain function
     //save
-    public void verifyPolicyOwnerAndEmail(String email, String policyNumber) {
+    public void verifyPolicyOwnerAndEmail(String email, PolicyId policyNumber) {
         User user = userFactory.create(email, policyNumber);
         user.addPolicy(policyNumber);
         userRepository.save(user);

@@ -14,4 +14,8 @@ public class PolicyHolderDetails {
         this.ID = ID;
         this.birthday = birthday;
     }
+
+    public String getEmail() {
+        return email;
+    }
 }

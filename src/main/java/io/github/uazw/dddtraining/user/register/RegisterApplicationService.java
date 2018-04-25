@@ -1,6 +1,7 @@
 package io.github.uazw.dddtraining.user.register;
 
 
+import io.github.uazw.dddtraining.policy.PolicyId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ public class RegisterApplicationService {
     }
 
     public void verifyPolicyOwnerAndEmail(String email, String policyNumber) {
-        registerService.verifyPolicyOwnerAndEmail(email, policyNumber);
+        registerService.verifyPolicyOwnerAndEmail(email, PolicyId.valueOf(policyNumber));
     }
 
     public void initializePassword(String uuid, String password) {
